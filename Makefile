@@ -1,5 +1,8 @@
 all: main
 
+BarnabasBox/libbarnabas.a:
+	make -C BarnabasBox -f Makefile
+
 attr_index.o: attr_index.c main.h
 	cproc -c -o attr_index.o attr_index.c
 

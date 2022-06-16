@@ -1,8 +1,8 @@
 #include <string.h>
 #include <unistd.h>
 #include <alloca.h>
-#include "../BarnabasBox/barnabas.h"
-#include "../Itoa/itoa.h"
+#include "BarnabasBox/barnabas.h"
+#include "BarnabasBox/Itoa/itoa.h"
 #ifndef MAIN_H
 #define MAIN_H
 

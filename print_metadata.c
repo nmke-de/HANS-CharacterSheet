@@ -7,16 +7,16 @@ void print_metadata(Metadata* list, int len, int selection, int offset){
 	int start = max(0, selection-row+1+offset);
 	int end = min(len, row+start);
 	for(int i = start; i < end; i++){
-		if (selection == i) fputc('>', stdout);
-		else fputc(' ', stdout);
-		fputs(list[i].name, stdout);
-		if (selection == i) fputc('<', stdout);
-		else fputc(' ', stdout);
+		if (selection == i) bputc('>');
+		else bputc(' ');
+		bputs(list[i].name);
+		if (selection == i) bputc('<');
+		else bputc(' ');
 		for(int j = 0; j < 15-strlen(list[i].name); j++){
-			fputc(' ', stdout);
+			bputc(' ');
 		}
-		fputc('\t', stdout);
-		fputs(list[i].val, stdout);
-		fputc('\n', stdout);
+		bputc('\t');
+		bputs(list[i].val);
+		bputc('\n');
 	}
 }

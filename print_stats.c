@@ -11,26 +11,26 @@ void print_stats(Stat* list, int len, int selection, int offset){
 		int max_attr = 0;
 		if (list[i].type[0] != NULL && list[i].type[1] != NULL) max_attr = max(list[i].type[0]->val, list[i].type[1]->val);
 		else if (list[i].type[0] != NULL) max_attr = list[i].type[0]->val;
-		if (selection == i) fputc('>', stdout);
-		else fputc(' ', stdout);
-		fputs(list[i].name, stdout);
-		if (selection == i) fputc('<', stdout);
-		else fputc(' ', stdout);
+		if (selection == i) bputc('>');
+		else bputc(' ');
+		bputs(list[i].name);
+		if (selection == i) bputc('<');
+		else bputc(' ');
 		for(int j = 0; j < MAX_STAT_NAME-strlen(list[i].name); j++){
-			fputc(' ', stdout);
+			bputc(' ');
 		}
-		fputc('\t', stdout);
-		fputs(map_attr(list[i].type[0]), stdout);
+		bputc('\t');
+		bputs(map_attr(list[i].type[0]));
 		if (list[i].type[1] != NULL) {
-			fputc('/', stdout);
-			fputs(map_attr(list[i].type[1]), stdout);
+			bputc('/');
+			bputs(map_attr(list[i].type[1]));
 		}
-		fputc('\t', stdout);
-		fputs(itoa((list[i].val + max_attr), 10), stdout);
-		fputc('\t', stdout);
-		fputs(itoa((list[i].val + max_attr) / 2, 10), stdout);
-		fputc('\t', stdout);
-		fputs(itoa((list[i].val + max_attr) / 5, 10), stdout);
-		fputc('\n', stdout);
+		bputc('\t');
+		bputs(itoa((list[i].val + max_attr), 10));
+		bputc('\t');
+		bputs(itoa((list[i].val + max_attr) / 2, 10));
+		bputc('\t');
+		bputs(itoa((list[i].val + max_attr) / 5, 10));
+		bputc('\n');
 	}
 }

@@ -7,20 +7,20 @@ void print_attributes(Attribute* list, int len, int selection, int offset){
 	int start = max(0, selection-row+1+offset);
 	int end = min(len, row+start);
 	for(int i = start; i < end; i++){
-		if (selection == i) fputc('>', stdout);
-		else fputc(' ', stdout);
-		fputs(list[i].name, stdout);
-		if (selection == i) fputc('<', stdout);
-		else fputc(' ', stdout);
+		if (selection == i) bputc('>');
+		else bputc(' ');
+		bputs(list[i].name);
+		if (selection == i) bputc('<');
+		else bputc(' ');
 		for(int j = 0; j < 11-strlen(list[i].name); j++){
-			fputc(' ', stdout);
+			bputc(' ');
 		}
-		fputc('\t', stdout);
-		fputs(itoa(list[i].val * 2, 10), stdout);
-		fputc('\t', stdout);
-		fputs(itoa(list[i].val, 10), stdout);
-		fputc('\t', stdout);
-		fputs(itoa(list[i].val * 2/5, 10), stdout);
-		fputc('\n', stdout);
+		bputc('\t');
+		bputs(itoa(list[i].val * 2, 10));
+		bputc('\t');
+		bputs(itoa(list[i].val, 10));
+		bputc('\t');
+		bputs(itoa(list[i].val * 2/5, 10));
+		bputc('\n');
 	}
 }

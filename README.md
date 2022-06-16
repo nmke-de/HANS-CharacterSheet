@@ -18,9 +18,7 @@ Incoming.
 
 ## Build
 
-Instructions incoming. Makefile is very compiler specific; I will change that.
-
-If you feel comfortable with that, you can type `make`.
+Type `make`. Use `CC=your-favorite-compiler make` to change the compiler.
 
 ## Usage
 

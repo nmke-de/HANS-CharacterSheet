@@ -31,4 +31,4 @@ main.o: main.c main.h
 	diet -Os gcc -c -o main.o main.c
 
 main: main.o attr_index.o default_item.o default_stat.o map_attr.o print_attributes.o print_inventory.o print_metadata.o print_stats.o read_stats.o
-	ld -static -s -z norelro -z noseparate-code -o main *.o ../libnathan.a /opt/diet/lib-x86_64/libc.a
+	ld -static -s -z norelro -z noseparate-code -o main *.o BarnabasBox/libbarnabas.a /usr/lib/libc.a

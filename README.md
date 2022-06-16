@@ -22,5 +22,25 @@ Type `make`. Use `CC=your-favorite-compiler make` to change the compiler.
 
 ## Usage
 
-Instructions incoming.
+**WIP**
 
+Type `./main your-character-sheet` to begin. If the argument is omitted, the program will default to "CHAR" as the character sheet.
+
+These are the keybindings:
+
+| key      | action                                                     | comment                  |
+| -------- | ---------------------------------------------------------- | ------------------------ |
+| `j`      | Select next item                                           |                          |
+| `k`      | Select previous item                                       |                          |
+| `h`      | Go to previous mode                                        |                          |
+| `l`      | Go to next mode                                            |                          |
+| `g`      | Select first item                                          |                          |
+| `G`      | Select last item                                           | `Shift g`                |
+| `Return` | Change misc. value, name of stat or name of inventory item |                          |
+| `+`      | Add 1 to current stat / attribute                          |                          |
+| `-`      | Subtract 1 from current stat / attribute                   |                          |
+| `J`      | Move current item down                                     | `Shift j`                |
+| `K`      | Move current item up                                       | `Shift k`                |
+| `*`      | Add new stat / inventory item                              | `Shift +` on my keyboard |
+| `_`      | Remove current item on exit                                | `Shift -` on my keyboard |
+| `q`      | Save and exit                                              |                          |

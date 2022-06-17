@@ -10,7 +10,7 @@
 #define min(a,b) (a<b?a:b)
 
 #define MAX_STAT_NAME 27
-#define MAX_INV_NAME 50
+#define MAX_INV_NAME 100
 #define MAX_META_VAL 20
 
 typedef struct {

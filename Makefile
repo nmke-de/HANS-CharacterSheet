@@ -24,6 +24,9 @@ print_inventory.o: print_inventory.c main.h
 print_metadata.o: print_metadata.c main.h
 	${CC} -c -o print_metadata.o print_metadata.c
 
+print_skills.o: print_skills.c main.h
+	${CC} -c -o print_skills.o print_skills.c
+
 print_stats.o: print_stats.c main.h
 	${CC} -c -o print_stats.o print_stats.c
 

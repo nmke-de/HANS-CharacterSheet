@@ -40,5 +40,5 @@ read_stats.o: read_stats.c main.h
 main.o: main.c main.h
 	${CC} -c -o main.o main.c
 
-main: main.o BarnabasBox/libbarnabas.a attr_index.o default_item.o default_stat.o map_attr.o print_attributes.o print_inventory.o print_metadata.o print_stats.o read_stats.o
+main: main.o BarnabasBox/libbarnabas.a attr_index.o default_item.o default_stat.o map_attr.o print_attributes.o print_inventory.o print_metadata.o print_skills.o print_stats.o read_stats.o
 	ld -static -s -z norelro -z noseparate-code -o main *.o BarnabasBox/libbarnabas.a /usr/lib/libc.a

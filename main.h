@@ -38,6 +38,7 @@ void print_metadata(Metadata *list, int len, int selection, int offset);
 void print_attributes(Attribute *list, int len, int selection, int offset);
 void print_stats(Stat *list, int len, int selection, int offset);
 void print_inventory(Item *list, int len, int selection, int offset);
+void print_skills(char **list, int len, int selection, int offset);
 int main(int, char **);
 const char* map_attr(Attribute *);
 const char attr_index(Attribute *);

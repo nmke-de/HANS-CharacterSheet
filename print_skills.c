@@ -9,7 +9,7 @@ void print_skills(char **list, int len_i, int selection, int offset){
 	for(int i = start; i < end; i++){
 		if (selection == i) bputc('>');
 		else bputc(' ');
-		bputs(list[i], 10);
+		bputs(list[i]);
 		if (selection == i) bputc('<');
 		else bputc(' ');
 		bputc('\n');

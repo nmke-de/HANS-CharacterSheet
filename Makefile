@@ -1,5 +1,9 @@
 all: main
 
+clean:
+	rm main
+	rm *.o
+
 BarnabasBox/libbarnabas.a:
 	make -C BarnabasBox -f Makefile
 

@@ -4,6 +4,8 @@ This is a repository for HANS character sheet written in C and with [BarnabasBox
 
 ![Screenshot showing the first page of the HANS character sheet](screenshot.png)
 
+See also: [HANSI](https://github.com/nmke-de/HANSI)
+
 ## But why?
 
 Mostly to practice my programming skills.
